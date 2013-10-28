@@ -24,6 +24,8 @@
 
   exports.JavascriptAsset = require('./modules/javascript').JavascriptAsset;
 
+  exports.StaticAsset = require('./modules/static').StaticAsset;
+
   exports.StaticAssets = require('./modules/static').StaticAssets;
 
   exports.SnocketsAsset = require('./modules/snockets').SnocketsAsset;
