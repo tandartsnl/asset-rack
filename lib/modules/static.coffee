@@ -1,4 +1,3 @@
-
 fs = require 'fs'
 pathutil = require 'path'
 async = require 'async'
@@ -6,7 +5,7 @@ mime = require 'mime'
 {Asset} = require '../.'
 {DynamicAssets} = require './dynamic'
 
-class StaticAsset extends Asset
+class exports.StaticAsset extends Asset
     create: (options) ->
         @filename = pathutil.resolve options.filename
         @mimetype ?= mime.types[pathutil.extname(@filename).slice 1] || 'text/plain'
@@ -17,5 +16,5 @@ class StaticAsset extends Asset
 
 class exports.StaticAssets extends DynamicAssets
     constructor: (options) ->
-        options?.type = StaticAsset
+        options?.type = exports.StaticAsset
         super options
